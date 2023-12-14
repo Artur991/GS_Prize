@@ -24,4 +24,20 @@ public void setToyWeight(int id, double weight) {
         }
     }
 }
+public void play() {
+    double totalWeight = 0;
+    for (GS toy : toys) {
+        totalWeight += toy.getWeight();
+    }
+    Random rand = new Random();
+    double randomNumber = rand.nextDouble() * totalWeight;
+    GS prizeToy = null;
+    for (GS toy : toys) {
+        if (randomNumber < toy.getWeight()) {
+            prizeToy = toy;
+            break;
+        }
+        randomNumber -= toy.getWeight();
+    }
+
 }
