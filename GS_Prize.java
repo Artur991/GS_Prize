@@ -39,5 +39,10 @@ public void play() {
         }
         randomNumber -= toy.getWeight();
     }
+    if (prizeToy != null && prizeToy.getQuantity() > 0) {
+        prizeToys.add(prizeToy);
+        prizeToy.setQuantity(prizeToy.getQuantity() - 1);
+    }
+}
 
 }
