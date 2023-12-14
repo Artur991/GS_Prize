@@ -5,6 +5,10 @@ import java.util.List;
 import java.util.Random;
 
 public class GS_Prize {
-    private List<Toy> toys;
-    private List<Toy> prizeToys;
+    private List<GS> toys;
+    private List<GS> prizeToys;
 }
+public GS_Prize() {
+        toys = new ArrayList<>();
+        prizeToys = new ArrayList<>();
+    }
