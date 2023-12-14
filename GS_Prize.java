@@ -44,5 +44,12 @@ public void play() {
         prizeToy.setQuantity(prizeToy.getQuantity() - 1);
     }
 }
-
+public void getPrizeToy() throws IOException {
+        if (prizeToys.size() > 0) {
+            GS prizeToy = prizeToys.remove(0);
+            FileWriter writer = new FileWriter("GS_folder.txt", true);
+            writer.write(prizeToy.getId() + "," + prizeToy.getName() + "\n");
+            writer.close();
+        }
+    }
 }
