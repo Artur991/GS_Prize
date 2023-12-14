@@ -16,4 +16,12 @@ public void addToy(int id, String name, int quantity, double weight) {
     GS toy = new GS(id, name, quantity, weight);
     toys.add(toy);
 }
+public void setToyWeight(int id, double weight) {
+    for (GS toy : toys) {
+        if (toy.getId() == id) {
+            toy.setWeight(weight);
+            break;
+        }
+    }
+}
 }
